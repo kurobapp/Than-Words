@@ -1,30 +1,72 @@
 [
   {
-    "name": "バズり投稿",
+    "name": "飼い猫の動画が万バズ",
     "type": "ADD",
     "target": "SELF",
     "rangeBase": [500, 2000]
   },
   {
-    "name": "過去ツイ発掘",
+    "name": "引用RTでクソリプ",
     "type": "SUB",
     "target": "ENEMY",
     "rangeBase": [300, 1500]
   },
   {
-    "name": "炎上商法",
+    "name": "炎上覚悟の暴露配信",
     "type": "ADD",
     "target": "SELF",
     "rangeBase": [100, 4000]
   },
   {
-    "name": "ネガキャン",
+    "name": "過去の失言スクショ",
     "type": "SUB",
     "target": "ENEMY",
     "rangeBase": [100, 3000]
   },
   {
-    "name": "アルゴリズム崩壊",
+    "name": "レスバトルの開始",
+    "type": "GAMBLE",
+    "target": "ENEMY",
+    "rangeBase": [2, 4]
+  },
+  {
+    "name": "深夜の飯テロ成功",
+    "type": "ADD",
+    "target": "SELF",
+    "rangeBase": [200, 800]
+  },
+  {
+    "name": "FF外から失礼します",
+    "type": "SUB",
+    "target": "ENEMY",
+    "rangeBase": [100, 500]
+  },
+  {
+    "name": "垢BAN",
+    "type": "BAN",
+    "target": "ALL",
+    "rangeBase": [0, 0]
+  },
+  {
+    "name": "推しからのリプライ",
+    "type": "ADD",
+    "target": "SELF",
+    "rangeBase": [1000, 3000]
+  },
+  {
+    "name": "集団通報で凍結騒ぎ",
+    "type": "SUB",
+    "target": "ENEMY",
+    "rangeBase": [500, 2000]
+  },
+  {
+    "name": "トレンド1位獲得",
+    "type": "ADD",
+    "target": "SELF",
+    "rangeBase": [2000, 5000]
+  },
+  {
+    "name": "アカウント乗っ取り",
     "type": "SWAP",
     "target": "ALL",
     "rangeBase": [0, 0]
