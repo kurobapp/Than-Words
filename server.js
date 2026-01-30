@@ -9,6 +9,7 @@ app.use(express.static("public"));
 /* カードデータの読み込み */
 let cardTemplates = [];
 try {
+  /* ファイル名を card.json に修正 */
   const data = fs.readFileSync("./card.json", "utf8");
   cardTemplates = JSON.parse(data);
 } catch (err) {
@@ -21,7 +22,7 @@ try {
 const lobbies = {};
 const socketToLobby = {};
 
-/* カード生成ロジック */
+/* カード生成エンジン */
 const generateCard = () => {
   const t = cardTemplates[Math.floor(Math.random() * cardTemplates.length)];
   const min = Math.floor(t.rangeBase[0] * (Math.random() * 0.5 + 0.5));
@@ -37,7 +38,6 @@ const generateCard = () => {
   };
 };
 
-/* 通信処理 */
 io.on("connection", (socket) => {
   /* ロビー作成 */
   socket.on("create-lobby", (username) => {

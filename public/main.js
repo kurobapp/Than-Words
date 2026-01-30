@@ -25,13 +25,14 @@ socket.on("lobby-created", (id) => {
 });
 
 socket.on("update-waiting", (data) => {
+  /* 階層を修正してundefinedを防止 */
   renderWaiting(data.count, data.hostId);
 });
 
 socket.on("game-start", (l) => render(l));
 socket.on("update-game", (l) => render(l));
 
-/* 待機画面の描画（undefined対策済み） */
+/* 待機画面の描画 */
 function renderWaiting(count, hostId) {
   const isHost = socket.id === hostId;
   const canStart = count >= 2;
