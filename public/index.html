@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFLUENCE RUSH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-menu" class="container">
+        <h1>INFLUENCE RUSH</h1>
+        <div class="input-group">
+            <label for="username">あなたのなまえ</label>
+            <input type="text" id="username" placeholder="なまえを入力" maxlength="10">
+        </div>
+        <div class="button-group">
+            <button id="create-lobby" class="btn-primary">ロビーを作成</button>
+            <button id="join-lobby" class="btn-secondary">ロビーに参加</button>
+        </div>
+        <p id="status-msg"></p>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
