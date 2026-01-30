@@ -1,0 +1,15 @@
+name: Keep Render Alive
+
+on:
+  schedule:
+    # 14分ごとに実行（Renderは15分で寝るため）
+    - cron: "*/14 * * * *"
+  workflow_dispatch: # 手動でテスト実行できるようにするボタン
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render URL
+        # ↓ 自分のアプリのURLに書き換えてください
+        run: curl https://than-words.onrender.com/
